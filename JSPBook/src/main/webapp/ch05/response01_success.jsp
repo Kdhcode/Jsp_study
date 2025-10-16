@@ -1,15 +1,12 @@
-<%@page import="java.util.Date"%>
-<%@page import="java.lang.Math"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Implicit Objects</title>
 </head>
 <body>
-	<%= new Date() %>
-	<%= Math.pow(5,2) %>
+	로그인을 성공했습니다!!
 </body>
 </html>

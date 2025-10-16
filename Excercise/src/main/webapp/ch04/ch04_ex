@@ -41,7 +41,7 @@
 ③ var 
 ④ response 
 
-07 다음 프로그램의 밑줄에 들어갈 올바른 것은 무엇인가? 3 
+07 다음 프로그램의 밑줄에 들어갈 올바른 것은 무엇인가? 2
 <jsp:_______ id="date" class="java.util.Date" />
 <%
     out.print("오늘의 날짜 및 시각: " + date);
