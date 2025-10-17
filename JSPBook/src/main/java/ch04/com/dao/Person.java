@@ -5,7 +5,6 @@ public class Person {
 	private String name = "홍길순";
 	
 	public Person() {
-		
 	}
 
 	public int getId() {
@@ -24,4 +23,5 @@ public class Person {
 		this.name = name;
 	}
 	
+
 }

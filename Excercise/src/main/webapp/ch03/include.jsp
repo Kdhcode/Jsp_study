@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Directives Tag</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	현재 시간: <%= LocalDateTime.now() %>
+	 <%@ include file="header.jsp" %>
+	 
+	 현재 시간: <%= LocalDateTime.now() %>
 </body>
 </html>

@@ -12,21 +12,15 @@
 	<%
 		Enumeration<String> en = request.getHeaderNames(); // 모든 헤더 이름 가져오기
 		
-		while (en.hasMoreElements()) { // 가져올 헤더 이름이 있으면 반복
+		while (en.hasMoreElements()) { // 가져올 헤더 이름이 있으면 반복 
 			String headerName = en.nextElement();
 			String headerValue = request.getHeader(headerName);
 			
-			out.println(headerName + " : " + headerValue + "<br>");
-	%>		
-			 <%= headerName %> : <%= headerValue %> <br>
-	<%			 
+			// out.println(headerName + ": " + headerValue + "<br>");
+	%>
+			<%= headerName %>: <%= headerValue %><br>
+	<%
 		}
 	%>
-	
-	
-
-
-
-
 </body>
 </html>

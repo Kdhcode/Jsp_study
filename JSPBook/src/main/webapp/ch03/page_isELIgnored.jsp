@@ -1,4 +1,3 @@
-<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!-- 현재 JSP 페이지에서 표현 언어를 사용할 수 없도록 설정 -->

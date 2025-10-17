@@ -1,19 +1,12 @@
-<%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Directives Tag</title>
 </head>
 <body>
-		<% 
-			Calendar cal = Calendar.getInstance();
-		%>
-		
-		<%= 
-		cal.get(Calendar.HOUR) + " : " + cal.get(Calendar.MINUTE)
-		%>
+	<h4>Hello, Java Server Pages.</h4>
 </body>
 </html>

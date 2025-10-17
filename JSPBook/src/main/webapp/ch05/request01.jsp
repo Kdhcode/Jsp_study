@@ -13,11 +13,5 @@
 		<p>비밀번호: <input type="password" name="passwd"></p>
 		<button type="submit">전송</button>
 	</form>
-	
-	
-
-
-
-
 </body>
 </html>

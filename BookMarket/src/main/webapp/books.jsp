@@ -1,9 +1,10 @@
+<%@page import="dao.BookRepository"%>
 <%@page import="dto.Book"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
+<%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +16,19 @@
 </head>
 <body>
 	<div class="container py-4">
-		<jsp:include page="title.jsp">
-		<jsp:param value="도서목록" name="title"/>
-		<jsp:param value="BookList" name="title_sub"/>
-		</jsp:include>
+		<%@ include file="menu.jsp" %>
+
+	 	<jsp:include page="title.jsp">
+    	<jsp:param value="도서목록" name="title"/>
+    	<jsp:param value="BookList" name="sub"/>
+    </jsp:include>
 
 		<%
-			List<Book> listOfBooks = bookDAO.getAllBooks();
+			// List<Book> listOfBooks = bookDAO.getAllBooks();
+		
+			// BookRepository 공유 객체로 변경
+			BookRepository dao = BookRepository.getInstance();
+			List<Book> listOfBooks = dao.getAllBooks();
 		%>
 
     <div class="row align-items-md-stretch text-center">
@@ -41,9 +48,9 @@
       		<p><%= book.getUnitPrice() %>원</p>
       		<p>
       			<!-- 보조 기기(스크린 리더)에게 "이거 버튼처럼 동작하는 요소야" 라고 알려줌 -->
-      			<a href="./book.jsp?id=<%= book.getBookId() %>" class="btn btn-secondary" role="button">
-      				상세 정보 &raquo;
-      			</a>
+						<a href="./book.jsp?id=<%= book.getBookId() %>" class="btn btn-secondary" role="button">
+							상세 정보 &raquo;
+						</a>      		
       		</p>
       	</div>
       </div>

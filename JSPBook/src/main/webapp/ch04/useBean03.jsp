@@ -9,7 +9,8 @@
 </head>
 <body>
 	<!-- 자바빈즈 Person을 생성하고 useBean 액션 태그에 Person 클래스를 사용하여 아이디, 이름 출력하기 -->
-	<jsp:useBean id="person" class="ch04.com.dao.Person" scope="request"/>
+	<jsp:useBean id="person" class="ch04.com.dao.Person" scope="request" />
+	
 	<p>아이디: <%= person.getId() %></p>
 	<p>이름: <%= person.getName() %></p>
 	
@@ -23,6 +24,13 @@
 	
 	<!-- JSP에서 Java 코드는 점점 분리하는 추세
 		밑으로 갈수록 더 추천하는 방식 -->
-	
 </body>
 </html>
+
+
+
+
+
+
+
+

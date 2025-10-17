@@ -17,7 +17,7 @@ isThreadSafe: 현재 JSP 페이지의 멀티스레드 허용 여부를 설정한
 info: 현재 JSP 페이지에 대한 설명을 설정한다.
 (errorPage): 현재 JSP 페이지에 오류가 발생했을 때 보여줄 오류 페이지를 설정한다.
 isErrorPage: 현재 JSP 페이지가 오류 페이지인지 여부를 설정한다.(기본값: false)
-(isELIgored): 현재 JSP 페이지의 표현 언어(EL) 지원 여부를 설정한다.(기본값: false)
+(isELIgnored): 현재 JSP 페이지의 표현 언어(EL) 지원 여부를 설정한다.(기본값: false)
 isScriptingEnabled: 현재 JSP 페이지의 스크립트 태그 사용 여부를 설정한다.
 
 03 JSP 페이지에 포함할 수 있는 외부 파일에는 HTML, JSP, 텍스트 파일 등이 있으며,

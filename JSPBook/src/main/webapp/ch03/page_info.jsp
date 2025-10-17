@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page info="Date 클래스를 이용한 날짜 출력하기" %>
-<!-- (참고) 웹 컨테이너가 getServietInfo() 메소드를 생성 -->
+<!-- (참고) 웹 컨테이너가 getServletInfo() 메소드를 생성 -->
 <!DOCTYPE html>
 <html>
 <head>

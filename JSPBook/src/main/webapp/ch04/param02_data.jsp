@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h3><%= request.getParameter("title") %></h3>
-	Today is: <%= request.getParameter("date") %> 
+	Today is: <%= request.getParameter("date") %>
 </body>
 </html>

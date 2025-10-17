@@ -15,7 +15,7 @@
 	에러가 발생했습니다.
 	
 	<h5>exception 내장 객체 변수</h5>
-	<% 
+	<%
 		exception.printStackTrace(new PrintWriter(out));
 	%>
 </body>

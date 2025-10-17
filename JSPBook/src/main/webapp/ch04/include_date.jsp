@@ -11,7 +11,7 @@
 	<p>오늘의 날짜 및 시간</p>
 	<p><%= new Date().toLocaleString() %></p>
 	
-	<!-- include  -->
+	<!-- include 디렉티브 태그와 비교 테스트 -->
 	<% int test = 1; %>
 </body>
 </html>

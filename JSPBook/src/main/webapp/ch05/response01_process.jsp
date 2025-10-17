@@ -1,3 +1,4 @@
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,14 +9,14 @@
 </head>
 <body>
 	<%
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("utf-8");
 		String userId = request.getParameter("id");
 		String userPw = request.getParameter("passwd");
 		
 		if ("admin".equals(userId) && "1234".equals(userPw)) {
-			response.sendRedirect("response01_success.jps");
+			response.sendRedirect("response01_success.jsp");
 		} else {
-			response.sendRedirect("response01_failed.jps");
+			response.sendRedirect("response01_failed.jsp");
 		}
 	%>
 </body>

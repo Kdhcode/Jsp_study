@@ -12,10 +12,5 @@
 	<!-- 표현문 태그: 변수, 계산식, 메소드 호출 결과를 문자열 형태로 출력하는데 사용(많이 씀) -->
 	<%-- <p>Today's date: <%= new java.util.Date() %></p> --%>
 	<p>Today's date: <%= new Date() %></p>
-	
-	
-	
-	
-	
 </body>
 </html>

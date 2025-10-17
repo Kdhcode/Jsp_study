@@ -18,11 +18,11 @@
 		</tr>
 		<tr>
 			<td>선언문(declaration)</td>
-			<td>&lt;%! %&gt;</td>
+			<td>(<%! %>)</td>
 			<td>자바 변수나 메소드를 정의하는데 사용한다.</td>
 		</tr>
 		<tr>
-			<td>스크립트 태그</td>
+			<td>(스크립틀릿(scriptlet))</td>
 			<td>&lt;% %&gt;</td>
 			<td>자바 로직 코드를 작성하는데 사용한다.</td>
 		</tr>

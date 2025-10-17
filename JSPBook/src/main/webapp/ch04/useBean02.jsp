@@ -11,10 +11,16 @@
 	<!-- 자바빈즈 Calculator를 생성하고 useBean 액션 태그에 Calculator 클래스를 사용하여 숫자 출력하기 -->
 	<jsp:useBean id="bean" class="ch04.com.dao.Calculator" />
 	<%
-		int m = bean.process(5); /* 자바빈객체.메소드호출(5) */
-		out.print("5의 3제곱:" + m);
+		int m = bean.process(5);
+		out.print("5의 3제곱: " + m);
 	%>
-
-	
 </body>
 </html>
+
+
+
+
+
+
+
+

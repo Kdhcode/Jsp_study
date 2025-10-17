@@ -9,17 +9,11 @@
 <body>
 	<!-- 스크립틀릿 태그에 0부터 10까지 짝수 출력하기 -->
 	<%
-		for(int i = 0; i <= 10; i++ ){
-			if(i % 2 == 0 ){
-				out.println(i);				
-			};
-		};
+		for (int i = 0; i <= 10; i++) {
+			if (i % 2 == 0) {
+				out.println(i + "<br>");
+			}
+		}
 	%>
-	
-	
-	
-	
-	
-	
 </body>
 </html>

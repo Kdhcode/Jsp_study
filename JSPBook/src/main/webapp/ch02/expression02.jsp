@@ -9,15 +9,12 @@
 </head>
 <body>
 	<!-- 표현문 태그로 연산 결과 출력하기 -->
-	<% 
+	<%
 		int a = 10;
 		int b = 20;
 		int c = 30;
 		out.println(a + b + c);
 	%>
 	<%= a + b + c %>
-	
-	
-	
 </body>
 </html>
