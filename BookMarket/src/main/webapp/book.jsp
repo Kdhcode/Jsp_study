@@ -4,6 +4,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@page errorPage="exceptionNoBookId.jsp" %>  
 <%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
 <!DOCTYPE html>
 <html>
@@ -41,7 +43,8 @@
     		<!-- 웹 앱 내부 접근 시 -->
   <%--   		<img alt="도서이미지" src="./resources/images/<%= book.getFilename() %>" style="width: 70%;"> --%>
     		<!-- 외부 폴더 접근 시 -->
-      	<img alt="도서이미지" src="<%= request.getContextPath() %> /images/ <%= book.getFilename() %>" style="width: 70%;">
+      	<img alt="도서이미지" src="<%= request.getContextPath() %>/images/<%= book.getFilename() %>" style="width: 250px; height: 350px">
+      	
     	</div>
       <div class="col-md-6">
       	<!-- Quiz: 도서 정보로 채워넣기(데이터 동적 바인딩) -->
