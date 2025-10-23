@@ -76,7 +76,7 @@
 	    				<td><%= bookCount %></td>
 	    				<td><%= (bookCount * bookPrice) %></td>
 	    				<td>
-    					<a href="./removeCart.jsp?id=<%=bookId  %>" class="badge text-bg-danger">삭제</a>
+    					<a href="./removeCart.jsp?id=<%= bookId  %>" class="badge text-bg-danger">삭제</a>
     				</td>
     				</tr>
 						<%

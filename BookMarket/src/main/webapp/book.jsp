@@ -4,9 +4,8 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@page errorPage="exceptionNoBookId.jsp" %>  
 <%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
+<%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +18,10 @@
 	<!-- 장바구니에 등록하기 위한 핸들러 함수 작성 -->
 	<script type="text/javascript">
 		function addToCart() {
-			if (confirm('도서를 장바구니에 추가하시겠습니까?')){
+			if (confirm('도서를 장바구니에 추가하시겠습니까?')) {
 				document.addForm.submit();
 			} else {
-				document.addForm.reset();				
+				document.addForm.reset();
 			}
 		}
 	</script>
@@ -52,11 +51,11 @@
     <div class="row align-items-md-stretch">
     	<div class="col-md-5">
     		<!-- 웹 앱 내부 접근 시 -->
-  <%--   		<img alt="도서이미지" src="./resources/images/<%= book.getFilename() %>" style="width: 70%;"> --%>
+    		<%-- <img alt="도서이미지" src="./resources/images/<%= book.getFilename() %>" style="width: 70%;"> --%>
     		<!-- 외부 폴더 접근 시 -->
-      	<img alt="도서이미지" src="<%= request.getContextPath() %>/images/<%= book.getFilename() %>" style="width: 250px; height: 350px">
-      	
+    		<img alt="도서이미지" src="<%= request.getContextPath() %>/images/<%= book.getFilename() %>" style="width: 70%;">
     	</div>
+    
       <div class="col-md-6">
       	<!-- Quiz: 도서 정보로 채워넣기(데이터 동적 바인딩) -->
 				<h3><b><%= book.getName() %></b></h3>
@@ -71,13 +70,13 @@
 				<p><b>출판일</b>: <%= book.getReleaseDate() %></p>				
 				<p><b>분류</b>: <%= book.getCategory() %></p>
 				<p><b>재고수</b>: <%= book.getUnitsInStock() %></p>
-				<h4><%= book.getUnitPrice() %> 원</h4>
+				<h4><%= book.getUnitPrice() %>원</h4>
 				<p>
 					<form action="./addCart.jsp?id=<%= book.getBookId() %>" method="post" name="addForm">
 						<input type="hidden" name="bookId" value="<%= book.getBookId() %>">
-						<a href="#" class="btn btn-info" onclick="addToCart()">도서주문 &raquo;</a> 
+						<a href="javascript:void(0)" class="btn btn-info" onclick="addToCart()">도서주문 &raquo;</a> 					
 						<a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
-						<a href="./books.jsp" class="btn btn-secondary">도서목록 &raquo;</a>
+						<a href="./books.jsp" class="btn btn-secondary">도서목록 &raquo;</a>					
 					</form>
 				</p>
       </div>

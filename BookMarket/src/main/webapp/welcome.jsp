@@ -1,6 +1,5 @@
 <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.time.LocalDateTime"%>
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,11 +24,11 @@
 		<%@ include file="menu.jsp" %>
 
 		<!-- 중간 타이틀 영역 -->
-		<jsp:include page="title.jsp">
-		<jsp:param value="<%= greeting %>" name="title"/>
-		<jsp:param value="<%= tagline %>" name="title_sub"/>
-		</jsp:include>
-  
+    <jsp:include page="title.jsp">
+    	<jsp:param value="<%= greeting %>" name="title"/>
+    	<jsp:param value="BookMarket" name="sub"/>
+    </jsp:include>
+
 		<!-- 본문 영역 -->
     <div class="row align-items-md-stretch text-center">
       <div class="col-md-12">
@@ -37,17 +36,16 @@
           <h3><%= tagline %></h3>
           
           <!-- 현재 접속 시간 출력하기 -->
-          <!-- 
-          	hh:mm:ss a 
+          <!-- hh:mm:ss a 
           	hh -> 12시간제(01~12), a -> 오전/오후(AM/PM)
           -->
-          	<% 
-							LocalDateTime now = LocalDateTime.now(); 
-							DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
-							
-							String CT = now.format(formatter);
-							out.println("현재 접속 시각: " + CT + "\n");
-						%> 	
+          <%
+          	LocalDateTime now = LocalDateTime.now();
+          	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
+          	
+          	String CT = now.format(formatter);
+          	out.println("현재 접속 시각: " + CT + "\n");
+          %>
         </div>
       </div>
  		</div>
